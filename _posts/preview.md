@@ -1,19 +1,37 @@
 ---
-title: "Preview Mode for Static Generation"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+title: "Get In Touch"
+excerpt: "Let's connect! Whether you have a project idea, want to collaborate, or just want to chat about technology, I'd love to hear from you."
 coverImage: "/assets/blog/preview/cover.jpg"
-date: "2020-03-16T05:35:07.322Z"
+date: "2024-01-15T12:00:00.000Z"
 author:
-  name: Joe Haddad
+  name: Developer
   picture: "/assets/blog/authors/joe.jpeg"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+I'm always excited to connect with fellow developers, potential collaborators, and anyone passionate about technology. Whether you have a project in mind, want to discuss the latest trends in web development, or just want to say hello, I'd love to hear from you!
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+## Let's Collaborate
 
-## Lorem Ipsum
+I'm particularly interested in projects that involve:
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+- **Modern Web Applications**: Building scalable, performant applications with React, Next.js, and TypeScript
+- **Open Source**: Contributing to meaningful projects that benefit the developer community
+- **Innovation**: Exploring new technologies and pushing the boundaries of what's possible
+- **Mentorship**: Helping fellow developers grow and sharing knowledge
+
+## Get In Touch
+
+Ready to start a conversation? Here are the best ways to reach me:
+
+- **Email**: [your.email@example.com](mailto:your.email@example.com)
+- **LinkedIn**: [Connect with me professionally](https://linkedin.com/in/yourprofile)
+- **GitHub**: [Check out my code](https://github.com/yourusername)
+- **Twitter**: [@yourusername](https://twitter.com/yourusername)
+
+## Response Time
+
+I typically respond to messages within 24-48 hours. For urgent matters or time-sensitive opportunities, feel free to mention that in your message and I'll prioritize accordingly.
+
+Looking forward to connecting with you!
