@@ -81,7 +81,8 @@ const Switch = () => {
   /** toggle mode */
   const handleModeSwitch = () => {
     const index = modes.indexOf(mode);
-    setMode(modes[(index + 1) % modes.length]);
+    const nextMode = modes[(index + 1) % modes.length];
+    setMode(nextMode as ColorSchemePreference);
   };
   return (
     <button
