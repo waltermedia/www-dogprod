@@ -1,6 +1,7 @@
-import cn from "classnames";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 type Props = {
   title: string;
@@ -10,15 +11,16 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <Image
-      src={src}
-      alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm w-full", {
-        "hover:shadow-lg transition-shadow duration-200": slug,
-      })}
-      width={1300}
-      height={630}
-    />
+    <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg">
+      <Image
+        src={src}
+        alt={`Cover Image for ${title}`}
+        fill
+        className={cn("object-cover shadow-sm", {
+          "hover:shadow-lg transition-shadow duration-200": slug,
+        })}
+      />
+    </AspectRatio>
   );
   return (
     <div className="sm:mx-0">
