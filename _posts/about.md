@@ -1,13 +1,13 @@
 ---
 title: "Get In Touch"
 excerpt: "Let's connect! Whether you have a project idea, want to collaborate, or just want to chat about technology, I'd love to hear from you."
-coverImage: "/assets/blog/preview/cover.jpg"
+coverImage: "/assets/blog/about/cover.jpg"
 date: "2024-01-15T12:00:00.000Z"
 author:
   name: Developer
   picture: "/assets/blog/authors/joe.jpeg"
 ogImage:
-  url: "/assets/blog/preview/cover.jpg"
+  url: "/assets/blog/about/cover.jpg"
 ---
 
 I'm always excited to connect with fellow developers, potential collaborators, and anyone passionate about technology. Whether you have a project in mind, want to discuss the latest trends in web development, or just want to say hello, I'd love to hear from you!
