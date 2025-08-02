@@ -11,13 +11,6 @@ ogImage:
 ---
 
 **🏰 Defend the Castle**
-Todo list:
-- Steam achievements
-- Bosses for wave 20, 30, 40, 50 and beyond
-- Balancing
-- Oil attack from wall
-
----
 
 How long can you survive - when each day only makes the enemy stronger?
 
