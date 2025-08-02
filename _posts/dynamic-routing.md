@@ -18,10 +18,11 @@ Todo list:
 - Oil attack from wall
 
 ---
-> Game development has been at a standstill for some time while I was working on all the information required to set up the Steamworks page- to be able to post the game to steam.  
+
 Updated: August 2, 2025
+: Game development has been at a standstill for some time while I was working on all the information required to set up the Steamworks page- to be able to post the game to steam.  
 ---
 
-> Website set up
 Updated: August 1, 2025
+: Website set up
 ---
