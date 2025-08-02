@@ -1,7 +1,7 @@
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import Avatar from "./avatar";
-import CoverImage from "./cover-image";
+import CompactCoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -25,7 +25,7 @@ export function PostPreview({
   return (
     <Card className="h-full flex flex-col">
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <CompactCoverImage slug={slug} title={title} src={coverImage} />
       </div>
       <CardHeader className="flex-grow">
         <CardTitle className="text-3xl leading-snug">
