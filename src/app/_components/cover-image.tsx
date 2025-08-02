@@ -15,9 +15,10 @@ const CoverImage = ({ title, src, slug }: Props) => {
       <Image
         src={src}
         alt={`Cover Image for ${title}`}
-        width={800} // eller valfritt värde
+        width={800}
         height={600}
-        className="object-contain max-h-[300px] w-auto h-auto"
+        sizes="100vw"
+        className="object-contain w-full h-auto max-h-[200px] sm:max-h-[300px] md:max-h-[400px]"
       />
     </div>
   );
