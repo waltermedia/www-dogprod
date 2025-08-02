@@ -1,8 +1,8 @@
 ---
-title: "My Projects"
-excerpt: "A showcase of my recent work spanning web applications, tools, and open-source contributions. Each project represents a unique challenge and learning opportunity."
+title: "Defend the Castle"
+excerpt: "Defend the Castle is an intense day-by-day tower defense game where you fight off waves of attackers in a world that never gives you a moment to breathe. Each day brings 5 waves of enemy assaults, and you have only 60 seconds to survive - again and again."
 coverImage: "/assets/blog/dynamic-routing/backtext.png"
-date: "2024-01-15T12:00:00.000Z"
+date: "2025-08-02T19:17:00.000Z"
 author:
   name: Developer
   picture: "/assets/blog/authors/jj.jpeg"
