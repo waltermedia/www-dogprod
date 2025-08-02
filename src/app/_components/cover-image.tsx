@@ -11,10 +11,7 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <AspectRatio
-      ratio = {16 / 9}
-      className = "overflow-hidden rounded-lg min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]"
-    >
+    <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
       <Image
         src={src}
         alt={`Cover Image for ${title}`}
@@ -23,7 +20,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
           "hover:shadow-lg transition-shadow duration-200": slug,
         })}
       />
-    </AspectRatio>
+    </div>
   );
   return (
     <div className="sm:mx-0">
