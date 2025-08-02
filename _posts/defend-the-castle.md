@@ -1,13 +1,13 @@
 ---
 title: "Defend the Castle"
 excerpt: "Defend the Castle is an intense day-by-day tower defense game where you fight off waves of attackers in a world that never gives you a moment to breathe. Each day brings 5 waves of enemy assaults, and you have only 60 seconds to survive - again and again."
-coverImage: "/assets/blog/dynamic-routing/coverImage.png"
+coverImage: "/assets/blog/defend-the-castle/coverImage.png"
 date: "2025-08-02T19:17:00.000Z"
 author:
   name: "Dev Linus"
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/dynamic-routing/coverImage.png"
+  url: "/assets/blog/defend-the-castle/coverImage.png"
 ---
 
 **🏰 Defend the Castle**
