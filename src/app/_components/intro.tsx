@@ -7,7 +7,7 @@ export function Intro() {
         {CMPNY_NAME}
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        ${CMS_DESCRIPTION}
+        {CMS_DESCRIPTION}
       </h4>
     </section>
   );
