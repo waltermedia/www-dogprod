@@ -1,37 +1,20 @@
 ---
-title: "Get In Touch"
-excerpt: "Let's connect! Whether you have a project idea, want to collaborate, or just want to chat about technology, I'd love to hear from you."
+title: "About"
+excerpt: "Discover the story behind the projects in game dev, art, and music."
 coverImage: "/assets/blog/about/cover.jpg"
-date: "2024-01-15T12:00:00.000Z"
+date: "2025-03-15T12:00:00.000Z"
 author:
-  name: Developer
-  picture: "/assets/blog/authors/joe.jpeg"
+  name: Dev Linus
+  picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
   url: "/assets/blog/about/cover.jpg"
 ---
 
-I'm always excited to connect with fellow developers, potential collaborators, and anyone passionate about technology. Whether you have a project in mind, want to discuss the latest trends in web development, or just want to say hello, I'd love to hear from you!
+Welcome. 
+I'm Linus and I've been making games, painting, and creating music and digital art for most of my adult life.
 
-## Let's Collaborate
+This site serves as a creative hub for original work in game development, visual art, and music production. Here you'll find my collection of projects, experiments, and ideas reflecting a passion for interactive storytelling, artistic expression, and sound design. If you're using any of my digital or physical content, this site is also a way to reach out whether you need help, advice, or just want to connect. 
 
-I'm particularly interested in projects that involve:
-
-- **Modern Web Applications**: Building scalable, performant applications with React, Next.js, and TypeScript
-- **Open Source**: Contributing to meaningful projects that benefit the developer community
-- **Innovation**: Exploring new technologies and pushing the boundaries of what's possible
-- **Mentorship**: Helping fellow developers grow and sharing knowledge
-
-## Get In Touch
-
-Ready to start a conversation? Here are the best ways to reach me:
-
-- **Email**: [your.email@example.com](mailto:your.email@example.com)
-- **LinkedIn**: [Connect with me professionally](https://linkedin.com/in/yourprofile)
-- **GitHub**: [Check out my code](https://github.com/yourusername)
-- **Twitter**: [@yourusername](https://twitter.com/yourusername)
-
-## Response Time
-
-I typically respond to messages within 24-48 hours. For urgent matters or time-sensitive opportunities, feel free to mention that in your message and I'll prioritize accordingly.
+While I genuinely appreciate your interest and messages, please note that I'm a father of a young child and run multiple full-time businesses. Response times may vary, but I do my best to reply as soon as I can.
 
 Looking forward to connecting with you!
