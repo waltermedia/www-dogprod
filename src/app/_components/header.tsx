@@ -7,7 +7,6 @@ const Header = () => {
       <Link href="/" className="hover:underline">
         Back
       </Link>
-      .
     </h2>
   );
 };
