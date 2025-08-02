@@ -11,7 +11,7 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
+    <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[400px] overflow-hidden rounded-lg">
       <Image
         src={src}
         alt={`Cover Image for ${title}`}
