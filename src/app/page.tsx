@@ -13,9 +13,6 @@ export default function Index() {
     <main>
       <Container>
         <Intro />
-
-text 12 3 12 31 
-
         <HeroPost
           title={heroPost?.title ?? ""}
           coverImage={heroPost?.coverImage ?? ""}

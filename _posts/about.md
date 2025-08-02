@@ -1,13 +1,13 @@
 ---
 title: "About"
 excerpt: "Discover the story behind the projects in game dev, art, and music."
-coverImage: "/assets/blog/about/cover.jpg"
+coverImage: "/assets/blog/about/about.png"
 date: "2025-03-15T12:00:00.000Z"
 author:
   name: Dev Linus
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/about/cover.jpg"
+  url: "/assets/blog/about/about.png"
 ---
 
 Welcome. 
