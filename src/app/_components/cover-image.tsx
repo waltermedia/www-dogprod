@@ -11,14 +11,12 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <div className="relative w-full h-[200px] sm:h-[300px] md:h-[300px] lg:h-[300px]">
+    <div className="relative w-full max-h-[300px] overflow-hidden rounded-lg">
       <Image
         src={src}
         alt={`Cover Image for ${title}`}
         fill
-        className={cn("object-cover shadow-sm", {
-          "hover:shadow-lg transition-shadow duration-200": slug,
-        })}
+        className="object-contain object-center"
       />
     </div>
   );
