@@ -11,12 +11,13 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <div className="relative w-full max-h-[300px] overflow-hidden rounded-lg">
+    <div className="w-full max-h-[300px] overflow-hidden rounded-lg flex justify-center items-center">
       <Image
         src={src}
         alt={`Cover Image for ${title}`}
-        fill
-        className="object-contain object-center"
+        width={800} // eller valfritt värde
+        height={600}
+        className="object-contain max-h-[300px] w-auto h-auto"
       />
     </div>
   );
