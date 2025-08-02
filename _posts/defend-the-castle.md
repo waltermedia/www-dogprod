@@ -11,6 +11,8 @@ ogImage:
 ---
 
 **🏰 Defend the Castle**
+Comming to the Steam store soon.
+
 
 How long can you survive - when each day only makes the enemy stronger?
 
