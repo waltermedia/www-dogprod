@@ -11,16 +11,17 @@ type Props = {
 
 const CompactCoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <div className="relative w-full aspect-square overflow-hidden rounded-md">
+    <div className="w-full overflow-hidden rounded-md flex justify-center items-center">
       <Image
         src={src}
         alt={`Cover Image for ${title}`}
-        fill
-        className="object-cover"
+        width={600} // try 400–800 based on your card width
+        height={400} // shorter height gives “compact” effect
+        className="object-cover rounded-md"
       />
     </div>
   );
-  
+
   return (
     <div className="sm:mx-0">
       {slug ? (
