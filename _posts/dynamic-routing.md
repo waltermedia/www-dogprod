@@ -1,13 +1,13 @@
 ---
 title: "My Projects"
 excerpt: "A showcase of my recent work spanning web applications, tools, and open-source contributions. Each project represents a unique challenge and learning opportunity."
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/dynamic-routing/backtext.png"
 date: "2024-01-15T12:00:00.000Z"
 author:
   name: Developer
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/dynamic-routing/cover.jpg"
+  url: "/assets/blog/dynamic-routing/backtext.png"
 ---
 
 Here's a collection of projects I've worked on recently. Each one represents a unique challenge that allowed me to explore new technologies, solve interesting problems, and create meaningful solutions.
