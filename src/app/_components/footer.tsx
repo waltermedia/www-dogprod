@@ -29,7 +29,7 @@ export function Footer() {
               className="mx-3 font-bold"
             >
               <a
-                href="#"
+                href="/posts/preview"
               >
                 About
               </a>
