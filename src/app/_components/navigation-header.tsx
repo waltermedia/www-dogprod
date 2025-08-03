@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { CMPNY_NAME } from "@/lib/constants";
 import { MENU_CONFIG } from "@/lib/menu-config";
