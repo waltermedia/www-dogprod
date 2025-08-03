@@ -14,6 +14,15 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./theme-toggle";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const NavigationHeader = () => {
   return (
@@ -106,43 +115,72 @@ const NavigationHeader = () => {
           </NavigationMenu>
 
           {/* Mobile Menu Button + Theme Switcher */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap">
             {/* Mobile Navigation Menu */}
-            <NavigationMenu className="md:hidden">
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-3 p-4 w-[300px]">
-                      <NavigationMenuLink asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <Link href="/">
-                          <div className="text-sm font-medium leading-none">Home</div>
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                        <Link href={MENU_CONFIG.about.href}>
-                          <div className="text-sm font-medium leading-none">{MENU_CONFIG.about.title}</div>
-                        </Link>
-                      </NavigationMenuLink>
-                      {MENU_CONFIG.portfolio.items.map((item) => (
-                        <NavigationMenuLink key={item.href} asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                          <Link href={item.href}>
-                            <div className="text-sm font-medium leading-none">{item.title}</div>
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Open menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right">
+                  <SheetHeader>
+                    <SheetTitle>Navigation Menu</SheetTitle>
+                    <Link href="/" className="font-bold text-xl mb-4">
+                      {CMPNY_NAME}
+                    </Link>
+                  </SheetHeader>
+                  <div className="grid gap-6 py-6">
+                    <Link
+                      href="/"
+                      className="block px-4 py-3 text-lg font-medium rounded-md text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href={MENU_CONFIG.about.href}
+                      className="block px-4 py-3 text-lg font-medium rounded-md text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      {MENU_CONFIG.about.title}
+                    </Link>
+                    <div>
+                      <h3 className="px-4 mb-3 font-semibold text-xl text-foreground">
+                        {MENU_CONFIG.portfolio.title}
+                      </h3>
+                      <div className="grid gap-1">
+                        {MENU_CONFIG.portfolio.items.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="block px-6 py-2 text-base text-muted-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                          >
+                            {item.title}
                           </Link>
-                        </NavigationMenuLink>
-                      ))}
-                      {MENU_CONFIG.blog.items.slice(0, 2).map((item) => (
-                        <NavigationMenuLink key={item.href} asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                          <Link href={item.href}>
-                            <div className="text-sm font-medium leading-none">{item.title}</div>
-                          </Link>
-                        </NavigationMenuLink>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+                    <div>
+                      <h3 className="px-4 mb-3 font-semibold text-xl text-foreground">
+                        {MENU_CONFIG.blog.title}
+                      </h3>
+                      <div className="grid gap-1">
+                        {MENU_CONFIG.blog.items.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="block px-6 py-2 text-base text-muted-foreground hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                          >
+                            {item.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
 
             {/* Theme Toggle */}
             <ThemeToggle />
