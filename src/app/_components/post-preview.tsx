@@ -1,7 +1,7 @@
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import Avatar from "./avatar";
-import CompactCoverImage from "./cover-image";
+import CompactCoverImage from "./compact-cover-image";
 import DateFormatter from "./date-formatter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 

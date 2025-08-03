@@ -11,15 +11,15 @@ type Props = {
 
 const CompactCoverImage = ({ title, src, slug }: Props) => {
   const image = (
-    <div className="w-full overflow-hidden rounded-md flex justify-center items-center">
+    <AspectRatio ratio={16 / 9} className="w-full">
       <Image
         src={src}
         alt={`Cover Image for ${title}`}
-        width={600} // try 400–800 based on your card width
-        height={400} // shorter height gives “compact” effect
-        className="object-cover rounded-md"
+        fill
+        sizes="100vw"
+        className="object-cover rounded-lg"
       />
-    </div>
+    </AspectRatio>
   );
 
   return (
