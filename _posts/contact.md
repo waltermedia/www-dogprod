@@ -10,7 +10,7 @@ ogImage:
   url: "/assets/blog/about/about.png"
 ---
 
-[📧 Send email](mailto:support@dogprod.com?subject=Contact%20form&body=Hello,%2C%20I%20want%20to%20i%20contact%20you%20regarding...)
+[📧 Send email](mailto:support@dogprod.com)
 
 We currently don't accept physical mail or phone calls
 Thank you for your business
