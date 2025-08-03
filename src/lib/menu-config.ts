@@ -15,6 +15,10 @@ export const MENU_CONFIG = {
     title: "About",
     href: "/posts/about",
   },
+  contact: {
+    title: "Contact",
+    href: "#",
+  },
   portfolio: {
     title: "Portfolio",
     description: "Game Development, Art & Music",
