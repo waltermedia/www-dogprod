@@ -27,8 +27,8 @@ export function PostPreview({
       <div className="mb-5">
         <CompactCoverImage slug={slug} title={title} src={coverImage} />
       </div>
-      <CardHeader className="flex-grow">
-        <CardTitle className="text-3xl leading-snug">
+      <CardHeader className="pb-3">
+        <CardTitle className="text-3xl leading-snug mb-2">
           <Link href={`/posts/${slug}`} className="hover:underline">
             {title}
           </Link>
@@ -37,9 +37,11 @@ export function PostPreview({
           <DateFormatter dateString={date} />
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-        <Avatar name={author.name} picture={author.picture} />
+      <CardContent className="flex-grow flex flex-col">
+        <p className="text-lg leading-relaxed mb-4 flex-grow">{excerpt}</p>
+        <div className="mt-auto">
+          <Avatar name={author.name} picture={author.picture} />
+        </div>
       </CardContent>
     </Card>
   );

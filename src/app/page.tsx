@@ -6,8 +6,10 @@ import { getAllPosts } from "@/lib/api";
 
 export default function Index() {
   const allPosts = getAllPosts();
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+
+  // Find featured post first, fallback to latest post
+  const heroPost = allPosts.find(post => post.featured) || allPosts[0];
+  const morePosts = allPosts.filter(post => post.slug !== heroPost?.slug);
 
   return (
     <main>
@@ -20,6 +22,7 @@ export default function Index() {
           author={heroPost?.author ?? { name: "", picture: "" }}
           slug={heroPost?.slug ?? ""}
           excerpt={heroPost?.excerpt ?? ""}
+          featured={heroPost?.featured ?? false}
         />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>

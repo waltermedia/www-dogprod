@@ -1,9 +1,10 @@
 import Footer from "@/app/_components/footer";
+import NavigationHeader from "@/app/_components/navigation-header";
+import { ThemeProvider } from "next-themes";
 import { CMS_NAME, CMS_DESCRIPTION, CMPNY_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "@/styles/globals.css";
 
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
@@ -60,9 +61,11 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
-        <ThemeSwitcher />
-        <div className="min-h-screen">{children}</div>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NavigationHeader />
+          <div className="min-h-screen">{children}</div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

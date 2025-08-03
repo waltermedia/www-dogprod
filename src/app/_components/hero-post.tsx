@@ -4,6 +4,7 @@ import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 type Props = {
   title: string;
@@ -12,6 +13,7 @@ type Props = {
   excerpt: string;
   author: Author;
   slug: string;
+  featured?: boolean;
 };
 
 export function HeroPost({
@@ -21,6 +23,7 @@ export function HeroPost({
   excerpt,
   author,
   slug,
+  featured = false,
 }: Props) {
   return (
     <section>
@@ -30,6 +33,11 @@ export function HeroPost({
       <Card className="mb-20 md:mb-28">
         <CardContent className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 p-6">
           <div>
+            {featured && (
+              <Badge variant="secondary" className="mb-3">
+                ⭐ Featured
+              </Badge>
+            )}
             <CardTitle className="mb-4 text-4xl lg:text-5xl leading-tight">
               <Link href={`/posts/${slug}`} className="hover:underline">
                 {title}

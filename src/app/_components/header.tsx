@@ -1,13 +1,17 @@
 import Link from "next/link";
+import { ChevronLeftIcon } from "lucide-react";
 
 const Header = () => {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8 flex items-center">
-      ￩ 
-      <Link href="/" className="hover:underline">
-        Back
+    <nav className="mb-12 mt-8">
+      <Link
+        href="/"
+        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <ChevronLeftIcon className="h-4 w-4" />
+        Back to Home
       </Link>
-    </h2>
+    </nav>
   );
 };
 
