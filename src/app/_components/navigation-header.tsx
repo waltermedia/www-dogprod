@@ -56,6 +56,14 @@ const NavigationHeader = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href={MENU_CONFIG.contact.href}>
+                    {MENU_CONFIG.contact.title}
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <NavigationMenuTrigger>{MENU_CONFIG.portfolio.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-4 w-[400px] lg:w-[500px]">

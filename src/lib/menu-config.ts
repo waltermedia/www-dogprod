@@ -17,12 +17,12 @@ export const MENU_CONFIG = {
   },
   contact: {
     title: "Contact",
-    href: "#",
+    href: "/posts/contact",
   },
   portfolio: {
     title: "Portfolio",
     description: "Game Development, Art & Music",
-    subtitle: "Explore our creative projects and interactive experiences.",
+    subtitle: "Explore our projects and interactive experiences.",
     items: [
       {
         title: "Defend the Castle",
