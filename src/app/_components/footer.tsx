@@ -18,7 +18,7 @@ export function Footer() {
               size="lg"
             >
               <a
-                href="#"
+                href="/posts/contact"
               >
                 Contact
               </a>
