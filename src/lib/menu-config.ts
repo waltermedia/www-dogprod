@@ -33,11 +33,11 @@ export const MENU_CONFIG = {
     subtitle: "Read about development, creativity, and innovation.",
     items: [
       // Add blog posts here as needed
-      // {
-      //   title: "Blog Post Title",
-      //   href: "/posts/blog-post-slug",
-      //   description: "Blog post description"
-      // }
+      {
+        title: "Test",
+        href: "/posts/defend-the-castle",
+        description: "Blog menu test"
+      }
     ] as MenuItem[]
   }
 };
