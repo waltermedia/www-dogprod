@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { CMPNY_NAME } from "@/lib/constants";
-
-import { getAllPosts } from "@/lib/api";
+import { Post } from "@/interfaces/post";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,8 +13,11 @@ import {
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./theme-toggle";
 
-const NavigationHeader = () => {
-  const allPosts = getAllPosts();
+interface NavigationHeaderProps {
+  allPosts: Post[];
+}
+
+const NavigationHeader = ({ allPosts }: NavigationHeaderProps) => {
 
   // Categorize posts dynamically
   const aboutPost = allPosts.find(post => post.slug === 'about');
