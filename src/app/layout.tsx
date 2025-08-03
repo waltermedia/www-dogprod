@@ -2,7 +2,6 @@ import Footer from "@/app/_components/footer";
 import NavigationHeader from "@/app/_components/navigation-header";
 import { ThemeProvider } from "next-themes";
 import { CMS_NAME, CMS_DESCRIPTION, CMPNY_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
-import { getAllPosts } from "@/lib/api";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -24,9 +23,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Fetch posts on the server
-  const allPosts = getAllPosts();
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -66,7 +62,7 @@ export default function RootLayout({
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NavigationHeader allPosts={allPosts} />
+          <NavigationHeader />
           <div className="min-h-screen">{children}</div>
           <Footer />
         </ThemeProvider>

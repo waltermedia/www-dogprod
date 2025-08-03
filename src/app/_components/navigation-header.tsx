@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CMPNY_NAME } from "@/lib/constants";
-import { Post } from "@/interfaces/post";
+import { MENU_CONFIG } from "@/lib/menu-config";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,24 +13,7 @@ import {
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./theme-toggle";
 
-interface NavigationHeaderProps {
-  allPosts: Post[];
-}
-
-const NavigationHeader = ({ allPosts }: NavigationHeaderProps) => {
-
-  // Categorize posts dynamically
-  const aboutPost = allPosts.find(post => post.slug === 'about');
-  const portfolioPosts = allPosts.filter(post =>
-    post.slug !== 'about' &&
-    (post.title.toLowerCase().includes('defend') ||
-      post.excerpt.toLowerCase().includes('game') ||
-      post.excerpt.toLowerCase().includes('project'))
-  );
-  const blogPosts = allPosts.filter(post =>
-    post.slug !== 'about' &&
-    !portfolioPosts.some(p => p.slug === post.slug)
-  );
+const NavigationHeader = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -54,34 +37,32 @@ const NavigationHeader = ({ allPosts }: NavigationHeaderProps) => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              {aboutPost && (
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href={`/posts/${aboutPost.slug}`}>
-                      About
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              )}
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href={MENU_CONFIG.about.href}>
+                    {MENU_CONFIG.about.title}
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
-              {portfolioPosts.length > 0 && (
+              {MENU_CONFIG.portfolio.items.length > 0 && (
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Portfolio</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>{MENU_CONFIG.portfolio.title}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid gap-3 p-4 w-[400px] lg:w-[500px]">
                       <div className="space-y-3 col-span-full">
-                        <h4 className="text-sm font-medium leading-none">Game Development, Art & Music</h4>
+                        <h4 className="text-sm font-medium leading-none">{MENU_CONFIG.portfolio.description}</h4>
                         <p className="text-sm leading-snug text-muted-foreground">
-                          Explore our creative projects and interactive experiences.
+                          {MENU_CONFIG.portfolio.subtitle}
                         </p>
                       </div>
-                      {portfolioPosts.map((post) => (
-                        <div key={post.slug} className="col-span-full">
+                      {MENU_CONFIG.portfolio.items.map((item) => (
+                        <div key={item.href} className="col-span-full">
                           <NavigationMenuLink asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <Link href={`/posts/${post.slug}`}>
-                              <div className="text-sm font-medium leading-none">{post.title}</div>
+                            <Link href={item.href}>
+                              <div className="text-sm font-medium leading-none">{item.title}</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                {post.excerpt}
+                                {item.description}
                               </p>
                             </Link>
                           </NavigationMenuLink>
@@ -92,24 +73,24 @@ const NavigationHeader = ({ allPosts }: NavigationHeaderProps) => {
                 </NavigationMenuItem>
               )}
 
-              {blogPosts.length > 0 && (
+              {MENU_CONFIG.blog.items.length > 0 && (
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
+                  <NavigationMenuTrigger>{MENU_CONFIG.blog.title}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid gap-3 p-4 w-[400px] lg:w-[500px]">
                       <div className="space-y-3 col-span-full">
-                        <h4 className="text-sm font-medium leading-none">Latest Posts</h4>
+                        <h4 className="text-sm font-medium leading-none">{MENU_CONFIG.blog.description}</h4>
                         <p className="text-sm leading-snug text-muted-foreground">
-                          Read about development, creativity, and innovation.
+                          {MENU_CONFIG.blog.subtitle}
                         </p>
                       </div>
-                      {blogPosts.slice(0, 3).map((post) => (
-                        <div key={post.slug} className="col-span-full">
+                      {MENU_CONFIG.blog.items.slice(0, 3).map((item) => (
+                        <div key={item.href} className="col-span-full">
                           <NavigationMenuLink asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                            <Link href={`/posts/${post.slug}`}>
-                              <div className="text-sm font-medium leading-none">{post.title}</div>
+                            <Link href={item.href}>
+                              <div className="text-sm font-medium leading-none">{item.title}</div>
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                {post.excerpt}
+                                {item.description}
                               </p>
                             </Link>
                           </NavigationMenuLink>
@@ -136,24 +117,22 @@ const NavigationHeader = ({ allPosts }: NavigationHeaderProps) => {
                           <div className="text-sm font-medium leading-none">Home</div>
                         </Link>
                       </NavigationMenuLink>
-                      {aboutPost && (
-                        <NavigationMenuLink asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                          <Link href={`/posts/${aboutPost.slug}`}>
-                            <div className="text-sm font-medium leading-none">About</div>
-                          </Link>
-                        </NavigationMenuLink>
-                      )}
-                      {portfolioPosts.map((post) => (
-                        <NavigationMenuLink key={post.slug} asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                          <Link href={`/posts/${post.slug}`}>
-                            <div className="text-sm font-medium leading-none">{post.title}</div>
+                      <NavigationMenuLink asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <Link href={MENU_CONFIG.about.href}>
+                          <div className="text-sm font-medium leading-none">{MENU_CONFIG.about.title}</div>
+                        </Link>
+                      </NavigationMenuLink>
+                      {MENU_CONFIG.portfolio.items.map((item) => (
+                        <NavigationMenuLink key={item.href} asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <Link href={item.href}>
+                            <div className="text-sm font-medium leading-none">{item.title}</div>
                           </Link>
                         </NavigationMenuLink>
                       ))}
-                      {blogPosts.slice(0, 2).map((post) => (
-                        <NavigationMenuLink key={post.slug} asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                          <Link href={`/posts/${post.slug}`}>
-                            <div className="text-sm font-medium leading-none">{post.title}</div>
+                      {MENU_CONFIG.blog.items.slice(0, 2).map((item) => (
+                        <NavigationMenuLink key={item.href} asChild className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <Link href={item.href}>
+                            <div className="text-sm font-medium leading-none">{item.title}</div>
                           </Link>
                         </NavigationMenuLink>
                       ))}
